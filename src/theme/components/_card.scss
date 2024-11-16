@@ -8,9 +8,9 @@
   height: $default-height;
   @include flex-center;
   flex-direction: column;
+  font-family: $card-font-name;
 
   &__title {
-    font-family: $card-title-font-name;
     font-weight: $card-title-font-weight;
     font-size: $card-title-font-size;
     line-height: $card-title-line-height;
