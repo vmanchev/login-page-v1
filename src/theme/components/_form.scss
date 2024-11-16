@@ -73,5 +73,7 @@ select:-webkit-autofill {
     width: $form-button-width;
     border: $form-button-border-style;
     border-radius: $form-button-border-radius;
+    text-align: $form-button-text-align;
+    text-decoration: none;
   }
 }
