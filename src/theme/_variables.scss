@@ -4,6 +4,9 @@ $bg-gradient: linear-gradient(to bottom right, #9181f4, #5038ed);
 $default-width: 90%;
 $default-height: 90%;
 
+$error-color: #ed5038;
+$error-font-size: 14px;
+
 $container-max-width: 600px;
 $container-max-height: 600px;
 
@@ -28,7 +31,7 @@ $form-input-line-height: 18px;
 $form-input-font-weight: 400;
 $form-input-padding-inline: 16px;
 $form-input-height: 52px;
-$form-input-width: 75%;
+$form-input-width: calc(100% - ($form-input-padding-inline * 2));
 
 $form-checkbox-border-style: solid 1px #333;
 $form-checkbox-border-radius: 4px;
@@ -39,7 +42,6 @@ $form-checkbox-font-weight: 400;
 $form-checkbox-size: 16px;
 $form-checkbox-mt: 6px;
 $form-checkbox-mr: 10px;
-$form-checkbox-width: 82%;
 
 $form-button-text-align: center;
 $form-button-font-name: "Poppins", sans-serif;
@@ -51,3 +53,12 @@ $form-button-padding: 17px;
 $form-button-width: 124px;
 $form-button-border-style: none;
 $form-button-border-radius: 16px;
+
+$form-error-border-style: solid 1px #ed5038;
+$form-error-padding: 8px 16px;
+$form-error-width: calc(75% - 32px);
+$form-error-border-radius: 16px;
+$form-error-bg-color: #fdedeb;
+
+$loading-bg-color: #e0e0e0;
+$loading-progress-color: #5038ed;

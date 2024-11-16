@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, effect, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { AuthStore } from '../store/auth.store';
 
 @Component({
@@ -10,15 +10,14 @@ import { AuthStore } from '../store/auth.store';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  private email = 'hello@edited.com';
-  private password = 'hello123';
+  authStore = inject(AuthStore);
+  router = inject(Router);
 
-  authState = inject(AuthStore);
-
-  ngOnInit() {
-    this.authState.login({
-      username: this.email,
-      password: this.password,
+  constructor() {
+    effect(() => {
+      if (!this.authStore.email()) {
+        this.router.navigate(['/login']);
+      }
     });
   }
 }

@@ -13,9 +13,13 @@ select:-webkit-autofill {
   align-items: center;
   width: 100%;
 
+  &__control {
+    width: 75%;
+    margin-bottom: $form-control-bottom-margin;
+  }
+
   &__input,
   &__checkbox {
-    margin-bottom: $form-control-bottom-margin;
     outline: none;
   }
 
@@ -34,7 +38,6 @@ select:-webkit-autofill {
 
   &__checkbox {
     display: flex;
-    width: $form-checkbox-width;
     > input {
       appearance: none;
       -webkit-appearance: none;
@@ -74,6 +77,34 @@ select:-webkit-autofill {
     border: $form-button-border-style;
     border-radius: $form-button-border-radius;
     text-align: $form-button-text-align;
-    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__error {
+    color: $error-color;
+    font-size: $error-font-size;
+    width: $form-error-width;
+    display: none;
+
+    &:first-of-type {
+      display: block;
+    }
+
+    &:before {
+      content: "*";
+    }
+  }
+}
+
+.alert {
+  &__error {
+    color: $error-color;
+    font-size: $error-font-size;
+    padding: $form-error-padding;
+    border: $form-error-border-style;
+    border-radius: $form-error-border-radius;
+    background: $form-error-bg-color;
+    margin-bottom: $form-control-bottom-margin;
   }
 }
