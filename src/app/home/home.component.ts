@@ -11,7 +11,7 @@ import { AuthStore } from '../store/auth.store';
 })
 export class HomeComponent {
   authStore = inject(AuthStore);
-  router = inject(Router);
+  private router = inject(Router);
 
   constructor() {
     effect(() => {

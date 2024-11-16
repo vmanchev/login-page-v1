@@ -7,12 +7,11 @@ import {
 } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { tapResponse } from '@ngrx/operators';
-import { AuthService } from './auth.service';
+import { AuthService } from '../shared/services/auth.service';
 import { computed, inject } from '@angular/core';
 import { debounceTime, pipe, switchMap, tap } from 'rxjs';
-import { AuthRequest } from './auth-request.interface';
-import { AuthSuccessResponse } from './auth-success-response.interface';
-import { AuthErrorResponse } from './auth-error-response.interface';
+import { AuthRequest } from '../shared/interfaces/auth-request.interface';
+import { AuthSuccessResponse } from '../shared/interfaces/auth-success-response.interface';
 import { HttpErrorResponse } from '@angular/common/http';
 
 type AuthState = {
