@@ -1,0 +1,28 @@
+@import "theme/variables";
+@import "theme/mixins/flex-center";
+@import "theme/components/card";
+@import "theme/components/form";
+
+html,
+body {
+  background-color: $bg-color;
+  @include flex-center;
+  height: 100%;
+  width: 100%;
+}
+
+.content__container {
+  background: $bg-gradient;
+  width: $default-width;
+  height: $default-height;
+  @include flex-center;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .content__container {
+    width: $container-max-width;
+    height: $container-max-width;
+  }
+}
