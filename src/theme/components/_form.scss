@@ -62,6 +62,7 @@ select:-webkit-autofill {
       font-size: $form-checkbox-font-size;
       line-height: $form-checkbox-line-height;
       font-weight: $form-checkbox-font-weight;
+      cursor: pointer;
     }
   }
 
@@ -94,17 +95,5 @@ select:-webkit-autofill {
     &:before {
       content: "*";
     }
-  }
-}
-
-.alert {
-  &__error {
-    color: $error-color;
-    font-size: $error-font-size;
-    padding: $form-error-padding;
-    border: $form-error-border-style;
-    border-radius: $form-error-border-radius;
-    background: $form-error-bg-color;
-    margin-bottom: $form-control-bottom-margin;
   }
 }

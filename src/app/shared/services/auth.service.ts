@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AuthRequest } from './auth-request.interface';
+import { AuthRequest } from '../interfaces/auth-request.interface';
 import { Observable } from 'rxjs';
-import { AuthSuccessResponse } from './auth-success-response.interface';
+import { AuthSuccessResponse } from '../interfaces/auth-success-response.interface';
 
 @Injectable({
   providedIn: 'root',

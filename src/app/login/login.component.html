@@ -6,8 +6,7 @@
     <div class="alert__error">
       {{ authStore.error() }}
     </div>
-    }
-
+    } @if(loginForm) {
     <form [formGroup]="loginForm" class="form" (submit)="onSubmit()">
       <div class="form__control">
         <input
@@ -18,10 +17,10 @@
           formControlName="username"
         />
 
-        @if(loginForm.dirty && loginForm.get('username')?.errors?.['required'])
+        @if(isSubmitted && loginForm.get('username')?.errors?.['required'])
         {
         <div class="form__error">Required field</div>
-        } @if(loginForm.dirty && loginForm.get('username')?.errors?.['email']) {
+        } @if(isSubmitted && loginForm.get('username')?.errors?.['email']) {
         <div class="form__error">Invalid email address</div>
         }
       </div>
@@ -34,13 +33,13 @@
           autocomplete="new-password"
           formControlName="password"
         />
-        @if(loginForm.dirty && loginForm.get('password')?.errors?.['required'])
+        @if(isSubmitted && loginForm.get('password')?.errors?.['required'])
         {
         <div class="form__error">Required field</div>
-        } @if(loginForm.dirty &&
+        } @if(isSubmitted &&
         loginForm.get('password')?.errors?.['minlength']) {
         <div class="form__error">Min. 6 characters</div>
-        } @if(loginForm.dirty && loginForm.get('password')?.errors?.['pattern'])
+        } @if(isSubmitted && loginForm.get('password')?.errors?.['pattern'])
         {
         <div class="form__error">Invalid password format</div>
         }
@@ -48,12 +47,13 @@
 
       <div class="form__control">
         <div class="form__checkbox">
-          <input type="checkbox" />
-          <label>Remember me</label>
+          <input type="checkbox" formControlName="rememberMe" id="rememberMe" />
+          <label for="rememberMe">Remember me</label>
         </div>
       </div>
 
       <button type="submit" class="form__button">Login Now</button>
     </form>
+    }
   </div>
 </div>

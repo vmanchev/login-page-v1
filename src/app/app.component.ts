@@ -11,6 +11,5 @@ import { AuthStore } from './store/auth.store';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'login-page-v1';
   authStore = inject(AuthStore);
 }

@@ -1,0 +1,5 @@
+@import "../../theme/mixins/content-container";
+
+:host {
+  @include content-container;
+}
