@@ -2,15 +2,58 @@
   <div class="card">
     <h1 class="card__title">SIGN IN TO YOUR ACCOUNT</h1>
 
-    <div class="form">
-      <input class="form__input" type="email" placeholder="Username" autocomplete="off" />
-      <input class="form__input" type="password" placeholder="Password" autocomplete="new-password" />
-      <div class="form__checkbox">
-        <input type="checkbox" />
-        <label>Remember me</label>
+    @if(authStore.isInvalid()) {
+    <div class="alert__error">
+      {{ authStore.error() }}
+    </div>
+    }
+
+    <form [formGroup]="loginForm" class="form" (submit)="onSubmit()">
+      <div class="form__control">
+        <input
+          class="form__input"
+          type="email"
+          placeholder="Username"
+          autocomplete="off"
+          formControlName="username"
+        />
+
+        @if(loginForm.dirty && loginForm.get('username')?.errors?.['required'])
+        {
+        <div class="form__error">Required field</div>
+        } @if(loginForm.dirty && loginForm.get('username')?.errors?.['email']) {
+        <div class="form__error">Invalid email address</div>
+        }
+      </div>
+
+      <div class="form__control">
+        <input
+          class="form__input"
+          type="password"
+          placeholder="Password"
+          autocomplete="new-password"
+          formControlName="password"
+        />
+        @if(loginForm.dirty && loginForm.get('password')?.errors?.['required'])
+        {
+        <div class="form__error">Required field</div>
+        } @if(loginForm.dirty &&
+        loginForm.get('password')?.errors?.['minlength']) {
+        <div class="form__error">Min. 6 characters</div>
+        } @if(loginForm.dirty && loginForm.get('password')?.errors?.['pattern'])
+        {
+        <div class="form__error">Invalid password format</div>
+        }
+      </div>
+
+      <div class="form__control">
+        <div class="form__checkbox">
+          <input type="checkbox" />
+          <label>Remember me</label>
+        </div>
       </div>
 
       <button type="submit" class="form__button">Login Now</button>
-    </div>
+    </form>
   </div>
 </div>
