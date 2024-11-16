@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+
+  constructor(private http: HttpClient) {
+
+    this.http.post('/api/login', {}).subscribe(console.log);
+  }
 
 }
