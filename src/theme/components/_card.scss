@@ -1,0 +1,27 @@
+@import "../variables";
+@import "../mixins/flex-center";
+
+.card {
+  background: $card-background;
+  border-radius: $card-border-radius;
+  width: $default-width;
+  height: $default-height;
+  @include flex-center;
+  flex-direction: column;
+
+  &__title {
+    font-family: $card-title-font-name;
+    font-weight: $card-title-font-weight;
+    font-size: $card-title-font-size;
+    line-height: $card-title-line-height;
+    color: $card-title-color;
+    text-align: $card-title-align;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: $card-max-width;
+    height: $card-max-height;
+  }
+}
