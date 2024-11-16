@@ -8,9 +8,10 @@ describe('LoadingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LoadingComponent]
+      imports: [LoadingComponent],
     })
-    .compileComponents();
+      .overrideComponent(LoadingComponent, { set: { template: '' } })
+      .compileComponents();
 
     fixture = TestBed.createComponent(LoadingComponent);
     component = fixture.componentInstance;
