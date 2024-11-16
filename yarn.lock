@@ -1844,6 +1844,20 @@
     outvariant "^1.4.3"
     strict-event-emitter "^0.5.1"
 
+"@ngrx/operators@^18.1.1":
+  version "18.1.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/operators/-/operators-18.1.1.tgz#166bcbacff9bd5cbeb2c5d85f43e11db65eef2ac"
+  integrity sha512-RB156PouKI/E79jxvJLaDFYMHz9JVFR8f4ogfAeT7sh2dDGoK4A+B0n1Cl0iYW9fpcJCdfB/mu7TkH6auFv1aQ==
+  dependencies:
+    tslib "^2.3.0"
+
+"@ngrx/signals@^18.1.1":
+  version "18.1.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/signals/-/signals-18.1.1.tgz#6747a603e66a8dbfc9482610cb460d93df66c4fa"
+  integrity sha512-7AaFp4VrzYhnDHlF15VZAMvp067zIC5arRRRMV+i+oi95sQVDXezpj74KTIguwRbZ3FU+GKGzFCNrwgYvginSg==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngtools/webpack@18.2.12":
   version "18.2.12"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-18.2.12.tgz#876a09f2b3acb0d09d93e906a9ba330d92703568"

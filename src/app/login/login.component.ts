@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,13 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {
-  username = 'hello@edited.com';
-  password = 'hello123';
-
-  constructor(private http: HttpClient) {
-    this.http
-      .post('/api/login', { username: this.username, password: this.password })
-      .subscribe(console.log);
-  }
-}
+export class LoginComponent {}
