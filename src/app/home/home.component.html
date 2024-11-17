@@ -1,8 +1,8 @@
 <div class="content__container">
   <div class="card">
-    <h1 class="card__title">Home</h1>
+    <h1 class="card__title spacer">Home</h1>
 
-    <p>Hello, {{ authStore.email() }}</p>
+    <p class="spacer">Hello, {{ authStore.email() }}</p>
 
     <button type="button" class="form__button" (click)="authStore.logout()">
       Logout

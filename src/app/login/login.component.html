@@ -1,6 +1,6 @@
 <div class="content__container">
   <div class="card">
-    <h1 class="card__title">SIGN IN TO YOUR ACCOUNT</h1>
+    <h1 class="card__title spacer">SIGN IN TO YOUR ACCOUNT</h1>
 
     @if(authStore.isInvalid()) {
     <div class="alert__error">
@@ -45,7 +45,7 @@
         }
       </div>
 
-      <div class="form__control">
+      <div class="form__control spacer">
         <div class="form__checkbox">
           <input type="checkbox" formControlName="rememberMe" id="rememberMe" />
           <label for="rememberMe">Remember me</label>
